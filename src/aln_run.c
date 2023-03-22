@@ -48,7 +48,8 @@ int create_msa_openMP(struct msa* msa, struct aln_param* ap,struct aln_tasks* t)
                 m[i]->ap = ap;
                 m[i]->mode = ALN_MODE_FULL;
         }
-        //LOG_MSG(" Allocated %d threads", n_threads);
+        LOG_MSG("Running OpenMP MSA");
+        LOG_MSG(" Allocated %d threads", n_threads);
         s = 0;
 
         g = t->list[0]->p;
@@ -98,7 +99,6 @@ int create_chaos_msa_openMP(struct msa* msa, struct aln_param* ap,struct aln_tas
 {
         struct aln_mem** m = NULL;
         struct aln_tasks* t_chaos = NULL;
-        struct rng_state* rng = NULL;
         int i,j,c,g,f,l;
         int best;
         int task_iter;
@@ -112,8 +112,7 @@ int create_chaos_msa_openMP(struct msa* msa, struct aln_param* ap,struct aln_tas
 #else
         int n_threads = 1;
 #endif
-
-        RUNP(rng = init_rng(0));
+ 
         numseq = msa->numseq;
         g = numseq / ap->chaos *  (ap->chaos * (ap->chaos-1)) / 2   + (ap->chaos*2 * (ap->chaos*2-1)) / 2;
 
@@ -547,10 +546,10 @@ int create_chaos_msa_serial(struct msa* msa, struct aln_param* ap,struct aln_tas
         float max_score;
 
         int numseq;
-        RUNP(rng = init_rng(0));
+        RUNP(rng = ap->rng);
         numseq = msa->numseq;
 
-
+        LOG_MSG("Running Serial MSA");
         /* LOG_MSG("Allocating %d",f); */
 
         RUN(alloc_tasks(&t_chaos,2));

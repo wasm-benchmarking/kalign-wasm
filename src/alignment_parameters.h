@@ -27,13 +27,14 @@
 #include "parameters.h"
 //#include "misc.h"
 #include <stdint.h>
-struct rng_state;
+//struct rng_state;
+#include "tlrng.h"
 
 #define ALN_MODE_SCORE_ONLY 2
 #define ALN_MODE_FULL 1
 
 struct aln_param{
-        /* struct rng_state* rng; */
+        struct rng_state* rng;
         /* run specific settings */
         /* const float* prof1; */
         /* const float* prof2; */

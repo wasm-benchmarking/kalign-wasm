@@ -47,6 +47,7 @@ struct parameters{
         int rename;             /* rename sequences - to make bali_score swallow the alignments */
         int dump_internal;
         int nthreads;
+        long seed;
         int clean;
         int unalign;
         int help_flag;

@@ -121,8 +121,10 @@ int build_tree_kmeans(struct msa* msa, struct aln_param* ap,struct aln_tasks** t
         LOG_MSG("Building guide tree.");
 
         if(ap->nthreads == 1){
+        	LOG_MSG("Using serial bisecting K-means" );
                 root = bisecting_kmeans_serial(msa,root, dm, samples, numseq, num_anchors, numseq);
         }else{
+        	LOG_MSG("Using parallel bisecting K-means" );
                 root = bisecting_kmeans_parallel(msa,root, dm, samples, numseq, num_anchors, numseq);
         }
 

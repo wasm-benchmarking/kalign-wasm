@@ -80,6 +80,9 @@ int init_ap(struct aln_param** aln_param, struct parameters* param,int L)
                 }
 
         }
+        rng_state * rng =  NULL;
+        RUNP(rng = init_rng(param->seed));
+        ap->rng = rng;
 
         *aln_param = ap;
         return OK;

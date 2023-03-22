@@ -50,7 +50,8 @@ struct parameters*init_param(void)
         param->tgpe = FLT_MAX;
         param->matadd = 0.0F;
         param->chaos = 0;
-        param->nthreads = 4;
+        param->nthreads = 1;
+        param->seed = 0;
         param->clean = 0;
         param->unalign = 0;
         return param;

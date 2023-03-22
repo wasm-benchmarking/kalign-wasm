@@ -130,7 +130,7 @@ darwin* )
 DEAD_STRIP="-Wl,-dead_strip"
 ;;
 *)
-DEAD_STRIP="-Wl,--gc-sections -Wl,--as-needed"
+DEAD_STRIP="-Wl,--gc-sections"
 ;;
 esac
 AC_SUBST(DEAD_STRIP)

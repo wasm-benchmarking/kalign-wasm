@@ -65,6 +65,8 @@
 #define OPT_CLEAN 15
 #define OPT_UNALIGN 16
 
+#define OPT_SEED 17
+
 static int run_kalign(struct parameters* param);
 static int check_for_sequences(struct msa* msa);
 
@@ -175,6 +177,7 @@ int print_AVX_warning(void)
 
 int main(int argc, char *argv[])
 {
+        optind=1;
         int version = 0;
         int c;
         int showw = 0;
@@ -203,6 +206,7 @@ int main(int argc, char *argv[])
                         {"matadd",  required_argument, 0, OPT_MATADD},
                         {"chaos",   required_argument, 0, OPT_CHAOS},
                         {"nthreads",  required_argument, 0, 'n'},
+                        {"seed", required_argument, 0, OPT_SEED},
                         {"input",  required_argument, 0, 'i'},
                         {"infile",  required_argument, 0, 'i'},
                         {"in",  required_argument, 0, 'i'},
@@ -272,6 +276,9 @@ int main(int argc, char *argv[])
                         break;
                 case OPT_MATADD :
                         param->matadd = atof(optarg);
+                        break;
+                case OPT_SEED :
+                        param->seed = atol(optarg);
                         break;
                 case 'h':
                         param->help_flag = 1;
