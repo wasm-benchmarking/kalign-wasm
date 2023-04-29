@@ -1,0 +1,60 @@
+
+Kalign (3.3.1)
+
+Copyright (C) 2006,2019,2020,2021 Timo Lassmann
+
+This program comes with ABSOLUTELY NO WARRANTY; for details type:
+`kalign -showw'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; consult the COPYING file for details.
+
+Please cite:
+  Lassmann, Timo.
+  "Kalign 3: multiple sequence alignment of large data sets."
+  Bioinformatics (2019) 
+  https://doi.org/10.1093/bioinformatics/btz795
+
+[2023-04-28 20:09:59] :     LOG : Detected protein sequences.
+[2023-04-28 20:09:59] :     LOG : CPU Time: 0.00u 00:00:00.00 Elapsed: 00:00:00.00
+[2023-04-28 20:09:59] :     LOG : Detected: 60 sequences.
+[2023-04-28 20:09:59] :     LOG : Calculating pairwise distances
+[2023-04-28 20:09:59] :     LOG : Anchor: 0 (tr|Q8RUT8|Q8RUT8_CHLRE)
+[2023-04-28 20:09:59] :     LOG : Anchor: 14 (UniRef100_A0A2K3CXC9/46-359)
+[2023-04-28 20:09:59] :     LOG : Anchor: 3 (UniRef100_Q8RUT8/1-314)
+[2023-04-28 20:09:59] :     LOG : Anchor: 15 (UniRef100_UPI000E3F8B0F/1-307)
+[2023-04-28 20:09:59] :     LOG : Anchor: 12 (UniRef100_A8JAJ2/46-352)
+[2023-04-28 20:09:59] :     LOG : Anchor: 8 (UniRef100_Q8L435/46-352)
+[2023-04-28 20:09:59] :     LOG : Anchor: 7 (UniRef100_Q93WP2/46-352)
+[2023-04-28 20:09:59] :     LOG : Anchor: 4 (UniRef100_A0A7C3GW70/1-307)
+[2023-04-28 20:09:59] :     LOG : Anchor: 13 (UniRef100_A0A2J8A9T1/4-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 10 (UniRef100_D8TM14/5-309)
+[2023-04-28 20:09:59] :     LOG : Anchor: 16 (UniRef100_B4Y103/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 11 (UniRef100_A0A8J4BMS3/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 6 (UniRef100_Q104L4/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 5 (UniRef100_B4Y105/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 2 (UniRef100_A0A8J4B4V3/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 1 (UniRef100_A0A8J4CUN2/5-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 9 (UniRef100_A0A8J4FWX7/6-308)
+[2023-04-28 20:09:59] :     LOG : Anchor: 20 (UniRef100_A0A835SZW5/47-346)
+[2023-04-28 20:09:59] :     LOG : Anchor: 22 (UniRef100_G8HKA0/49-345)
+[2023-04-28 20:09:59] :     LOG : Anchor: 18 (UniRef100_A0A835Y120/29-325)
+[2023-04-28 20:09:59] :     LOG : Anchor: 30 (UniRef100_G8HK98/65-359)
+[2023-04-28 20:09:59] :     LOG : Anchor: 17 (UniRef100_D8UCU7/4-296)
+[2023-04-28 20:09:59] :     LOG : Anchor: 23 (UniRef100_A0A7S0R526/72-363)
+[2023-04-28 20:09:59] :     LOG : Anchor: 32 (UniRef100_G8HKA1/69-358)
+[2023-04-28 20:09:59] :     LOG : Anchor: 26 (UniRef100_M1PA51/77-366)
+[2023-04-28 20:09:59] :     LOG : Anchor: 25 (UniRef100_A0A7S3QU15/76-365)
+[2023-04-28 20:09:59] :     LOG : Anchor: 29 (UniRef100_A0A2J8A9R5/9-295)
+[2023-04-28 20:09:59] :     LOG : Anchor: 37 (UniRef100_A0A7D3SP32/9-294)
+[2023-04-28 20:09:59] :     LOG : Anchor: 35 (UniRef100_A0A7S1SYD0/9-294)
+[2023-04-28 20:09:59] :     LOG : Anchor: 24 (UniRef100_A0A4D6FZM8/39-324)
+[2023-04-28 20:09:59] :     LOG : Anchor: 21 (UniRef100_A0A699ZPF4/16-299)
+[2023-04-28 20:09:59] :     LOG : Anchor: 41 (UniRef100_A0A061SNP6/17-297)
+[2023-04-28 20:09:59] :     LOG : CPU Time: 0.03u 00:00:00.03 Elapsed: 00:00:00.00
+[2023-04-28 20:09:59] :     LOG : 32 anchors 
+[2023-04-28 20:09:59] :     LOG : Building guide tree.
+[2023-04-28 20:09:59] :     LOG : Using serial bisecting K-means
+[2023-04-28 20:09:59] :     LOG : base case: 60 : 910.864868
+[2023-04-28 20:09:59] :     LOG : CPU Time: 0.06u 00:00:00.05 Elapsed: 00:00:00.00
+[2023-04-28 20:09:59] :     LOG : Aligning
+[2023-04-28 20:10:00] :     LOG : CPU Time: 0.07u 00:00:00.06 Elapsed: 00:00:01.00
