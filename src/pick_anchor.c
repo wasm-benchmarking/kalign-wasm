@@ -64,12 +64,14 @@ int* select_seqs(struct msa* msa, int num_anchor)
                 seq_sort[i]->id = i;
                 seq_sort[i]->len = msa->sequences[i]->len;//  aln->sl[i];
         }
-
+//	for(i = 0; i < msa->numseq;i++){
+//            LOG_MSG("id: %d\tlen: %d", seq_sort[i]->id, seq_sort[i]->len);
+//        }
         qsort(seq_sort, msa->numseq, sizeof(struct sort_struct*),sort_by_len);
-        //for(i = 0; i < aln->numseq;i++){
-        //fprintf(stdout,"%d\t%d\n", seq_sort[i]->id,seq_sort[i]->len);
-        //}
-
+//        LOG_MSG("-- Sorted --");
+//	for(i = 0; i < msa->numseq;i++){
+//            LOG_MSG("id: %d\tlen: %d", seq_sort[i]->id, seq_sort[i]->len);
+//        }
 
         //fprintf(stdout,"%d\t seeds\n", num_anchor);
 
@@ -79,6 +81,7 @@ int* select_seqs(struct msa* msa, int num_anchor)
         //c = 0;
         for(i = 0; i < num_anchor;i++){
                 anchors[i] = seq_sort[i*stride]->id;
+		LOG_MSG("Anchor: %d (%s)",anchors[i], msa->sequences[anchors[i]]->name);
         }
         ASSERT(i == num_anchor,"Cound not select all anchors\tnum_anchor:%d\t numseq:%d",num_anchor,msa->numseq);
 
@@ -95,10 +98,25 @@ int sort_by_len(const void *a, const void *b)
 {
         struct sort_struct* const *one = a;
         struct sort_struct* const *two = b;
-
-        if((*one)->len > (*two)->len){
+        int len_gt = (*one)->len > (*two)->len;
+        int len_eq = (*one)->len == (*two)->len;
+        int id_gt = 0;
+        int id_eq = 0;
+        if(len_gt){
                 return -1;
+        }else if(len_eq){
+            // break length order ties using id
+            id_gt = ((*one)->id > (*two)->id);
+            id_eq = ((*one)->id == (*two)->id);
+            if(id_gt){
+                return -1;
+            } else if (id_eq){
+                return 0;
+            } else {
+                return 1;
+            }
         }else{
                 return 1;
         }
 }
+

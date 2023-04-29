@@ -160,15 +160,15 @@ ERROR:
 
 float calc_distance(uint8_t* seq_a, uint8_t* seq_b, int len_a,int len_b, int L)
 {
-#ifdef HAVE_AVX2
-        uint8_t dist;
-        if(len_a > len_b){
-                dist = bpm_256(seq_a, seq_b, len_a, len_b);
-        }else{
-                dist = bpm_256(seq_b, seq_a, len_b, len_a);
-        }
-        return (float)dist;
-#else
+//#ifdef HAVE_AVX2
+//        uint8_t dist;
+//        if(len_a > len_b){
+//                dist = bpm_256(seq_a, seq_b, len_a, len_b);
+//        }else{
+//                dist = bpm_256(seq_b, seq_a, len_b, len_a);
+//        }
+//        return (float)dist;
+//#else
         struct bignode* hash[1024];
         int i;
         float dist;
@@ -212,7 +212,7 @@ float calc_distance(uint8_t* seq_a, uint8_t* seq_b, int len_a,int len_b, int L)
                 }
         }
         return dist;
-#endif
+//#endif
 
 }
 

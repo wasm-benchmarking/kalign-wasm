@@ -289,6 +289,7 @@ struct node* bisecting_kmeans_serial(struct msa* msa, struct node* n, float** dm
                 float** dm = NULL;
                 RUNP(dm = d_estimation(msa, samples, num_samples,1));// anchors, num_anchors,1));
                 n = upgma(dm,samples, num_samples);
+		LOG_MSG("base case: %d : %f", num_samples, dm[0][1]);
 
                 gfree(dm);
                 MFREE(samples);
@@ -342,6 +343,7 @@ struct node* bisecting_kmeans_serial(struct msa* msa, struct node* n, float** dm
         num_l = best->nl;
 
         num_r = best->nr;
+	LOG_MSG("best split: %d %d : %f", num_l, num_r, best->score);
 
         for(i = 0; i < 4;i++){
                 free_kmeans_results(res_ptr[i]);
